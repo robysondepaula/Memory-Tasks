@@ -1,0 +1,31 @@
+<div>
+    <h1 class="title">MEMORY TASKS</h1>
+</div>
+<form [formGroup] = "entry"(ngSubmit)="onSubmit($event)">
+   
+    <mat-form-field  appearance="fill">
+        <mat-label>Not forget to:</mat-label>
+        <input [formControl]="entryTasks"
+        matInput placeholder="Ex. Pay the cellphone bill">
+        <mat-error *ngIf="entryTasks.hasError('required')">Please enter a task</mat-error>
+      </mat-form-field>
+      <div>
+    <button class="buttonAdd" mat-raised-button color="primary">Enter a new Task</button>
+</div>
+<div>  
+    <h1 class="titleListToDo">Tasks to do:</h1>
+    <div class="form-group form-check">
+      <p class="listToDo"
+      *ngFor="let tasks of datastore.getTasks(); let i = index"(onSubmit)="onSubmit" >
+      <mat-checkbox #checkBox  [checked]="isCheckBoxChecked"(click)="onItemChecked(i)" > 
+      {{ tasks }}
+      </mat-checkbox>&nbsp;
+      <button class="deleteIcon" (click)="openDialog()" class="Delete"mat-fab color="primary" >
+        <mat-icon class="deleteIcon">delete</mat-icon>
+      </button>
+    </p>
+    </div>
+  </div>
+
+
+</form>

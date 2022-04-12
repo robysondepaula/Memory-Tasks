@@ -1,0 +1,48 @@
+:host{
+    form{
+        padding: 1.5em;
+        text-align: center;
+    }
+    .buttonAdd{
+        background-color: rgb(3, 3, 95);
+    }
+
+    .title{
+        padding: 1em;
+        text-align: center;
+        font-size:xx-large;
+        font-weight: bold;
+       
+        
+    }
+    .deleteIcon{
+        size: small;
+    }
+    
+
+    .Delete{
+        color:white;
+        size:small;
+        margin:auto; 
+        position:absolute;
+        right: 0;
+        background:red;
+
+        
+     
+        
+    }
+    
+    .listToDo{
+        padding:0.75em;
+        text-align: left;
+        font-size: small;
+        
+    }
+    
+    .titleListToDo{
+        padding: 1em;
+        font-size: medium;
+    }
+}
+

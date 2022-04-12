@@ -1,0 +1,28 @@
+<mat-toolbar class ="upText" color="primary">
+  <button mat-icon-button
+  (click)="drawer.toggle()"
+   class="example-icon"
+   aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>{{ title }}</span>
+</mat-toolbar>
+
+<mat-drawer-container class="example-container">
+  <mat-drawer #drawer mode ="side" opened>
+    <mat-nav-list >
+      <a  class="navList" mat-list-item routerLink="tasks"  (click)="drawer.toggle()"><span class="material-icons">
+        fact_check
+        </span> Do! Tasks</a>
+      <a   class="navList" mat-list-item routerLink="historytasks" (click)="drawer.toggle()"><span class="material-icons">
+        done_all
+        </span>Performed Tasks</a>
+      <a  class="navList" mat-list-item routerLink="aboutUs" (click)="drawer.toggle()"><span class="material-icons">
+        info
+        </span> About Us</a>
+    </mat-nav-list>
+  </mat-drawer>
+  <mat-drawer-content>
+  <router-outlet (activate)="changeTitle($event.pageTitle)"></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>

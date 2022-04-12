@@ -1,0 +1,40 @@
+
+:host{
+    background-color:rgb(9, 31, 226);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    
+
+   .upText{
+       background:rgb(3, 3, 95);
+       border: 2px solid white;
+     
+   }
+  .navList{
+      padding:0em;
+  }
+   .mat-drawer{
+       background:rgb(3, 3, 95);
+       border: 2px solid white;
+   }
+
+
+   .mat-list-base .mat-list-item{
+   color:lavender;
+   font-size:larger;
+  
+ }
+
+
+mat-drawer-container{
+    flex: 1;
+    
+
+    mat-drawer-content{
+        background:rgb(245, 231, 231);
+    }
+}
+}  
+
+    

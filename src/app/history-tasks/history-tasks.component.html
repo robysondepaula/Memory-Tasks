@@ -1,0 +1,14 @@
+<div>
+    <header>
+    <h1 class="title">History of Tasks</h1>
+</header>
+<body>
+    <p  class="showingTasks"  *ngFor="let tasks of datastore.getTasks(); let i= index">
+        {{tasks}}
+    </p>
+    
+</body>
+<div>
+<button [style.margin-left.%]="33" class="clearTasks" mat-raised-button color="primary" (click)="clearHistory()">Clear done Tasks</button>
+</div>
+</div>
